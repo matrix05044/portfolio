@@ -1,0 +1,132 @@
+.l-menu {
+  background-color: #a43f49;
+  width: 30rem;
+  min-height: 100vh;
+  text-align: center;
+  position: fixed;
+  transition: 1s;
+  z-index: 100;
+}
+@media(max-width: 1024px) {
+  .l-menu {
+    pasition: absolute;
+    top: 0;
+    left: -30rem;
+  }
+}
+.l-menu--active {
+  left: 0;
+  transition: 1s;
+}
+
+.c-hamburger {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  right: -5rem;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+@media(max-width: 1024px) {
+  .c-hamburger {
+    display: block;
+  }
+}
+.c-hamburger__span, .c-hamburger__span::after, .c-hamburger__span::before {
+  width: 4rem;
+  height: 0.5rem;
+  margin: 0 0.2rem;
+  background-color: #a43f49;
+  display: block;
+  position: absolute;
+  top: 35%;
+  display: block;
+  transition: transform 0.5s;
+}
+.c-hamburger__span::before {
+  content: "";
+  margin: 0;
+  position: relative;
+  top: -1rem;
+  left: 0;
+}
+.c-hamburger__span::after {
+  content: "";
+  margin: 0;
+  position: relative;
+  top: 0.5rem;
+  left: 0;
+  transition: opacity 0.5s;
+}
+.c-hamburger__span--active {
+  transform: translateY(1rem) rotate(-45deg);
+}
+.c-hamburger__span--active::before {
+  transform: translateY(1rem) rotate(90deg);
+}
+.c-hamburger__span--active::after {
+  opacity: 0;
+}
+
+.c-logo {
+  padding-top: 6rem;
+  margin-bottom: 7rem;
+}
+.c-logo__photo {
+  border-radius: 50%;
+}
+.c-logo__title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.c-nav {
+  padding: 0;
+  border-top: 4px solid #fff;
+}
+.c-nav__link {
+  color: white;
+  text-decoration: none;
+}
+.c-nav__item {
+  padding: 3rem 0;
+  border-bottom: 4px solid #fff;
+  font-weight: 700;
+  transition: background-color 0.5s;
+}
+.c-nav__item--on {
+  background-color: #fff;
+  color: #a43f49;
+}
+.c-nav__item:hover {
+  background-color: #fff;
+  color: #a43f49;
+}
+
+.c-socials {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 20%;
+  margin-bottom: 5rem;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+}
+.c-socials__item {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+.c-socials__item:hover {
+  background-color: #fff;
+  color: #a43f49;
+}
+.c-socials__link {
+  color: inherit;
+}

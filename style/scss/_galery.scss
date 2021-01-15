@@ -1,0 +1,96 @@
+@import "_variables";
+@import "mixins";
+
+.c-galery-headline {
+    @include titles;
+}
+
+.c-galery-nav {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+
+    &__item {
+        margin: 1rem 1rem;
+        font-weight: 800;
+
+        &--on {
+            color: $redColor;
+            border-bottom: 1px solid $redColor;
+        }
+    }
+}
+
+.l-galery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+
+    @media#{$small-tablet} {
+        display: block;
+    }
+
+}
+
+.c-card {
+    @include border-bot;
+    width: 49%;
+    position: relative;
+
+    @media#{$small-tablet} {
+        width: 100%;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: .5rem;
+    }
+
+    &:hover>* {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+
+}
+
+.c-background {
+    position: absolute;
+    background-color: $whiteColor;
+    width: 90%;
+    height: calc(60%);
+    z-index: 100;
+    top: 20%;
+    left: 5%;
+    text-align: center;
+    padding: 10%;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: rotateX(-80deg);
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    &__icon {
+        background-color: $redColor;
+        color: white;
+        font-size: 5rem;
+        padding: .5rem;
+        border-radius: .5rem;
+        cursor: pointer;
+    }
+
+    &__title {
+        @include h4;
+        color: black;
+        text-align: center;
+    }
+
+    &__span {
+        color: #7a7a7a;
+    }
+}

@@ -1,0 +1,156 @@
+@import "_variables";
+@import "mixins";
+
+.l-menu {
+    background-color: $redColor;
+    width: 30rem;
+    min-height: 100vh;
+    text-align: center;
+    position: fixed;
+    transition: 1s;
+    z-index: 100;
+
+    @media#{$tablet} {
+        pasition: absolute;
+        top: 0;
+        left: -30rem;
+    }
+
+    &--active {
+        left: 0;
+        transition: 1s;
+    }
+}
+
+.c-hamburger {
+    // background-color: white;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    right: -5rem;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+
+    @media#{$tablet} {
+        display: block;
+    }
+
+    // &--active{
+    //     display: none;
+    // }
+
+
+
+    &__span {
+        width: 4rem;
+        height: 0.5rem;
+        margin: 0 .2rem;
+        background-color: $redColor;
+        display: block;
+        position: absolute;
+        top: 35%;
+        display: block;
+        transition: transform .5s;
+
+        &::before {
+            @extend .c-hamburger__span;
+            content: "";
+            margin: 0;
+            position: relative;
+            top: -1rem;
+            left: 0;
+        }
+
+        &::after {
+            @extend .c-hamburger__span;
+            content: "";
+            margin: 0;
+            position: relative;
+            top: .5rem;
+            left: 0;
+            transition: opacity .5s;
+        }
+
+        &--active {
+            transform: translateY(1rem) rotate(-45deg);
+
+            &::before {
+                transform: translateY(1rem) rotate(90deg);
+            }
+
+            &::after {
+                opacity: 0;
+            }
+        }
+    }
+
+
+}
+
+.c-logo {
+    padding-top: 6rem;
+    margin-bottom: 7rem;
+
+    &__photo {
+        border-radius: 50%;
+    }
+
+    &__title {
+        @include h4;
+        margin-bottom: .5rem;
+    }
+}
+
+.c-nav {
+    padding: 0;
+    border-top: 4px solid $whiteColor;
+
+    &__link {
+        color: white;
+        text-decoration: none;
+
+    }
+
+    &__item {
+        padding: 3rem 0;
+        border-bottom: 4px solid $whiteColor;
+        font-weight: 700;
+        transition: background-color 0.5s;
+
+        &--on {
+            @include hover;
+        }
+
+        &:hover {
+            @include hover;
+        }
+    }
+}
+
+.c-socials {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 20%;
+    margin-bottom: 5rem;
+    border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+
+    &__item {
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color .3s;
+
+        &:hover {
+            @include hover($whiteColor, $redColor);
+        }
+    }
+
+    &__link {
+        color: inherit;
+    }
+}
