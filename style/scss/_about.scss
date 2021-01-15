@@ -55,6 +55,8 @@
         border-radius: 1rem;
         width: 50%;
         height: 50%;
+        margin-top: auto;
+        margin-bottom: auto;
 
         @media#{$small-tablet} {
             width: 100%;
@@ -71,12 +73,12 @@
     padding: 0 5rem;
 
     @media#{$tablet} {
-        padding: 0 5%;
         width: 50%;
     }
 
     @media#{$small-tablet} {
         width: 100%;
+        padding: 0;
     }
 
     &__title {

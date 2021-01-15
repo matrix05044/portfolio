@@ -59,6 +59,8 @@
   border-radius: 1rem;
   width: 50%;
   height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 @media(max-width: 768px) {
   .c-article__img {
@@ -75,13 +77,13 @@
 }
 @media(max-width: 1024px) {
   .c-description {
-    padding: 0 5%;
     width: 50%;
   }
 }
 @media(max-width: 768px) {
   .c-description {
     width: 100%;
+    padding: 0;
   }
 }
 .c-description__title {
