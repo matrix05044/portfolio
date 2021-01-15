@@ -1,7 +1,7 @@
 .l-menu {
   background-color: #a43f49;
   width: 30rem;
-  min-height: 100vh;
+  height: 100vh;
   text-align: center;
   position: fixed;
   transition: 1s;
@@ -71,8 +71,8 @@
 }
 
 .c-logo {
-  padding-top: 6rem;
-  margin-bottom: 7rem;
+  padding-top: 10%;
+  margin-bottom: 10%;
 }
 .c-logo__photo {
   border-radius: 50%;
@@ -85,18 +85,23 @@
 }
 
 .c-nav {
-  padding: 0;
-  border-top: 4px solid #fff;
+  padding: 0 0%;
+  border-top: 2px solid #fff;
 }
 .c-nav__link {
   color: white;
   text-decoration: none;
 }
 .c-nav__item {
-  padding: 3rem 0;
-  border-bottom: 4px solid #fff;
+  padding: 10% 0;
+  border-bottom: 2px solid #fff;
   font-weight: 700;
   transition: background-color 0.5s;
+}
+@media(max-height: 838px) {
+  .c-nav__item {
+    padding: 5% 0;
+  }
 }
 @media(min-width: 1351px) {
   .c-nav__item:hover {
@@ -112,9 +117,15 @@
 .c-socials {
   display: flex;
   justify-content: space-between;
-  padding: 5rem 20%;
+  padding: 10% 20%;
   margin-bottom: 5rem;
   border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+}
+@media(max-height: 838px) {
+  .c-socials {
+    padding: 5% 20%;
+    margin-bottom: 2rem;
+  }
 }
 .c-socials__item {
   background-color: rgba(0, 0, 0, 0.2);

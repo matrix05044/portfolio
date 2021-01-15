@@ -4,7 +4,7 @@
 .l-menu {
     background-color: $redColor;
     width: 30rem;
-    min-height: 100vh;
+    height: 100vh;
     text-align: center;
     position: fixed;
     transition: 1s;
@@ -36,12 +36,6 @@
     @media#{$tablet} {
         display: block;
     }
-
-    // &--active{
-    //     display: none;
-    // }
-
-
 
     &__span {
         width: 4rem;
@@ -90,8 +84,8 @@
 }
 
 .c-logo {
-    padding-top: 6rem;
-    margin-bottom: 7rem;
+    padding-top: 10%;
+    margin-bottom: 10%;
 
     &__photo {
         border-radius: 50%;
@@ -104,8 +98,8 @@
 }
 
 .c-nav {
-    padding: 0;
-    border-top: 4px solid $whiteColor;
+    padding: 0 0%;
+    border-top: 2px solid $whiteColor;
 
     &__link {
         color: white;
@@ -114,10 +108,14 @@
     }
 
     &__item {
-        padding: 3rem 0;
-        border-bottom: 4px solid $whiteColor;
+        padding: 10% 0;
+        border-bottom: 2px solid $whiteColor;
         font-weight: 700;
         transition: background-color 0.5s;
+
+        @media#{$height} {
+            padding: 5% 0;
+        }
 
         @media#{$super-wide} {
 
@@ -137,9 +135,14 @@
 .c-socials {
     display: flex;
     justify-content: space-between;
-    padding: 5rem 20%;
+    padding: 10% 20%;
     margin-bottom: 5rem;
     border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+
+    @media#{$height} {
+        padding: 5% 20%;
+        margin-bottom: 2rem;
+    }
 
     &__item {
         background-color: rgba(0, 0, 0, 0.2);
