@@ -11,6 +11,10 @@
   var burger = document.querySelector('.c-hamburger__span');
   console.log(cardNav);
   window.addEventListener('scroll', function (e) {
+    nav__link.forEach(function (elem) {
+      elem.classList.remove('c-nav__item--on');
+    });
+
     if (window.scrollY < 1200) {
       check();
       nav__link[0].classList.add('c-nav__item--on');

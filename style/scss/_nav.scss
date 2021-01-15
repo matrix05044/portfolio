@@ -119,13 +119,18 @@
         font-weight: 700;
         transition: background-color 0.5s;
 
+        @media#{$super-wide} {
+
+
+            &:hover {
+                @include hover;
+            }
+        }
+
         &--on {
             @include hover;
         }
 
-        &:hover {
-            @include hover;
-        }
     }
 }
 

@@ -98,11 +98,13 @@
   font-weight: 700;
   transition: background-color 0.5s;
 }
-.c-nav__item--on {
-  background-color: #fff;
-  color: #a43f49;
+@media(min-width: 1351px) {
+  .c-nav__item:hover {
+    background-color: #fff;
+    color: #a43f49;
+  }
 }
-.c-nav__item:hover {
+.c-nav__item--on {
   background-color: #fff;
   color: #a43f49;
 }
